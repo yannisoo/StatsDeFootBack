@@ -10,7 +10,7 @@
         "startServer:dev": "set NODE_ENV=dev && nodemon server.js",
         "startServer:local": "set NODE_ENV=local && nodemon server.js",
         "startServer:prod": "set NODE_ENV=prod && nodemon server.js",
-        "start": "set NODE_ENV=prod && nodemon server.js"
+        "start": "npm install && set NODE_ENV=prod && nodemon server.js"
     },
     "private": true,
     "dependencies": {
