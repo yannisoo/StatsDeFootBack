@@ -10,6 +10,7 @@ global.fetch = require('node-fetch');
 require('dotenv').config({  path:  resolve(__dirname,  './server/config/'  +  process.env.NODE_ENV.trim()  +  '/.env')  });
 console.log('Server environment : ' + process.env.NODE_ENV.trim());
 
+
 //set up variable for express and mongoose
 let app = express(),
     port = 3000,
