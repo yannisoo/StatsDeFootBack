@@ -59,5 +59,5 @@ app.use(function(req, res) {
     res.status(404).send({ url: req.originalUrl + ' is not implemented' })
 });
 
-app.listen(port);
+app.listen(process.env.PORT || port);
 console.log('StatsDeFoot : RESTful API server started on: ' + port);
