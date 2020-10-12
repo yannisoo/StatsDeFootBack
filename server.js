@@ -52,9 +52,13 @@ let Test = require('./server/api/models/testModel');
 
 //importing routes
 let testRoutes = require('./server/api/routes/testRoutes');
-let countryRoutes = require('./server/api/routes/countryRoutes');
 testRoutes(app);
+
+let countryRoutes = require('./server/api/routes/countryRoutes');
 countryRoutes(app);
+
+let leagueRoutes = require('./server/api/routes/leagueRoutes');
+leagueRoutes(app);
 
 
 app.use(function(req, res) {
