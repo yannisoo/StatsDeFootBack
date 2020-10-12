@@ -6,4 +6,8 @@ module.exports = function(app) {
     app.route('/leaguesByCountry/:country')
         .get(league.getLeaguesByCountry)
 
+    // todoList Routes
+    app.route('/teamsByLeague/:league_id')
+        .get(league.getTeamsByLeague)
+
 };
