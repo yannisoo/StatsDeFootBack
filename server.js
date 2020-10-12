@@ -30,7 +30,7 @@ const option = {
 
 //config cors
 var corsOptions = {
-    origin: ['https://statsdefootfront.herokuapp.com', 'https://statsdefoot.herokuapp.com'],
+    origin: ['https://statsdefootfront.herokuapp.com', 'https://statsdefoot.herokuapp.com', 'http://localhost:4200'],
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
     credentials: true,
     optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
@@ -52,7 +52,9 @@ let Test = require('./server/api/models/testModel');
 
 //importing routes
 let testRoutes = require('./server/api/routes/testRoutes');
+let countryRoutes = require('./server/api/routes/countryRoutes');
 testRoutes(app);
+countryRoutes(app);
 
 
 app.use(function(req, res) {
