@@ -5,7 +5,8 @@
     "main": "server.js",
     "scripts": {
         "startDb": "mongod --dbpath db",
-        "startServer": "set NODE_ENV=local && nodemon server.js",
+        "startServerWindows": "set NODE_ENV=local && nodemon server.js",
+        "startServerMac": "export NODE_ENV=local && nodemon server.js",
         "debugServer": "set NODE_ENV=local && nodemon --inspect server.js",
         "startServer:dev": "set NODE_ENV=dev && nodemon server.js",
         "startServer:local": "set NODE_ENV=local && nodemon server.js",
