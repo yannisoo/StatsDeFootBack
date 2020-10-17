@@ -60,6 +60,8 @@ countryRoutes(app);
 let leagueRoutes = require('./server/api/routes/leagueRoutes');
 leagueRoutes(app);
 
+let matchRoutes = require('./server/api/routes/matchRoutes');
+matchRoutes(app);
 
 app.use(function(req, res) {
     res.status(404).send({ url: req.originalUrl + ' is not implemented' })
