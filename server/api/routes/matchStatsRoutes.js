@@ -5,5 +5,4 @@ module.exports = function(app) {
     // todoList Routes
     app.route('/matchStats/:fixtures_id')
         .get(matchStats.getMatchStats)
-
 };
