@@ -15,4 +15,30 @@ exports.previsousMatchesBetween2teams = function(req, res) {
         
 };
 
+exports.last5MatchesOfATeam = function(req, res) {
+
+    let request = unirest("GET", API.url + 'v2/fixtures/team/' + req.params.team + '/last/5' );
+    request.query({
+        "timezone": "Europe/Paris"
+    });    
+    request.headers(API.headers);
+    request.then(function (APIresponse){
+        res.json(APIresponse.body.api);
+    })
+        
+};
+
+exports.matchById = function(req, res) {
+
+    let request = unirest("GET", API.url + 'v2/fixtures/id/' + req.params.id);
+    request.query({
+        "timezone": "Europe/Paris"
+    });    
+    request.headers(API.headers);
+    request.then(function (APIresponse){
+        res.json(APIresponse.body.api);
+    })
+        
+};
+
 
