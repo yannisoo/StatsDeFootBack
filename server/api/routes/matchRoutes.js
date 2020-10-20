@@ -9,4 +9,7 @@ module.exports = function(app) {
     app.route('/last5MatchesOfATeam/:team')
         .get(match.last5MatchesOfATeam)
 
+    app.route('/matchById/:id')
+        .get(match.matchById)
+
 };
