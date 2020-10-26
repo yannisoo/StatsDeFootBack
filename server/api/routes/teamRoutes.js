@@ -5,4 +5,7 @@ module.exports = function(app) {
     // todoList Routes
     app.route('/team/:team_id')
         .get(team.getTeam)
+    
+    app.route('/teamsByLeague/:league_id')
+    .get(league.getTeamsByLeague)
 };
