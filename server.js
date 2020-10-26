@@ -70,6 +70,9 @@ matchStatsRoutes(app);
 let teamRoutes = require('./server/api/routes/teamRoutes');
 teamRoutes(app);
 
+let searchRoutes = require('./server/api/routes/searchRoutes');
+searchRoutes(app);
+
 app.use(function(req, res) {
     res.status(404).send({ url: req.originalUrl + ' is not implemented' })
 });
