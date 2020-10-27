@@ -1,8 +1,8 @@
 'use strict';
 module.exports = function(app) {
     let match = require('../controllers/matchController.js');
+    let cache = require('../cache/cache');
 
-    // todoList Routes
     app.route('/previsousMatchesBetween2teams/:team1/:team2')
         .get(match.previsousMatchesBetween2teams)
 
@@ -12,4 +12,9 @@ module.exports = function(app) {
     app.route('/matchById/:id')
         .get(match.matchById)
 
+    app.route('/matchByDate/:date')
+        .get(match.matchByDate)
+
+    app.route('/next10MatchesByLeague/:id')
+        .get(match.next10MatchesByLeague)
 };
