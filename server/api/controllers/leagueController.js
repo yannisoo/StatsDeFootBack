@@ -15,13 +15,5 @@ exports.getLeaguesByCountry = function(req, res) {
 }
 
 
-exports.getTeamsByLeague = function(req, res) {
-    let datatype = 'team';
-    let request = unirest("GET", API.url + 'v2/teams/league/' + req.params.league_id );
-    request.headers(API.headers);
-    request.then(function (APIresponse){
-        APIresponse.body.api.datatype = datatype
-        res.json(APIresponse.body.api);
-    });
-}
+
 
