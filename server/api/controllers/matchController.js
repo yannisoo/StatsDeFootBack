@@ -54,6 +54,18 @@ exports.matchByDate = function(req, res) {
         
 };
 
+exports.matchByDateAndLeague = async function(req, res) {
+    let request = unirest("GET", API.url + 'v2/fixtures/league/' + req.params.league + '/' + req.params.date);  
+    request.query({
+        "timezone": "Europe/Paris"
+    }); 
+    request.headers(API.headers);
+    request.then(function (APIresponse){
+        res.json(APIresponse.body.api);
+    })
+           
+};
+
 exports.next10MatchesByLeague = function(req, res) {
 
     let request = unirest("GET", API.url + 'v2/fixtures/league/' + req.params.id + '/next/10');

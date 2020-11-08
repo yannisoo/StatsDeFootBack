@@ -15,6 +15,9 @@ module.exports = function(app) {
     app.route('/matchByDate/:date')
         .get(match.matchByDate)
 
+    app.route('/matchByDateAndLeague/:date/:league')
+        .get(match.matchByDateAndLeague)
+
     app.route('/next10MatchesByLeague/:id')
         .get(match.next10MatchesByLeague)
 };
