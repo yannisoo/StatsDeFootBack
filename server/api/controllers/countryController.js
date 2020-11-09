@@ -1,6 +1,7 @@
 'use strict';
 var unirest = require("unirest");
-const API = require("../apiValue/apiValue.js")
+const API = require("../apiValue/apiValue.js");
+
 
 exports.getAll = function(req, res) {
     let datatype = 'country'
