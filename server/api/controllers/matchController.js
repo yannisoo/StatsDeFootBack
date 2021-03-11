@@ -10,7 +10,7 @@ exports.previsousMatchesBetween2teams = function(req, res) {
     });    
     request.headers(API.headers);
     request.then(function (APIresponse){
-        res.json(APIresponse.body);
+        res.json(APIresponse.body.api);
     })
         
 };
@@ -23,7 +23,7 @@ exports.last5MatchesOfATeam = function(req, res) {
     });    
     request.headers(API.headers);
     request.then(function (APIresponse){
-        res.json(APIresponse.body);
+        res.json(APIresponse.body.api);
     })
         
 };
@@ -36,7 +36,7 @@ exports.matchById = function(req, res) {
     });    
     request.headers(API.headers);
     request.then(function (APIresponse){
-        res.json(APIresponse.body);
+        res.json(APIresponse.body.api);
     })
         
 };
@@ -49,7 +49,7 @@ exports.matchByDate = function(req, res) {
     });    
     request.headers(API.headers);
     request.then(function (APIresponse){
-        res.json(APIresponse.body);
+        res.json(APIresponse.body.api);
     })
         
 };
@@ -61,7 +61,7 @@ exports.matchByDateAndLeague = async function(req, res) {
     }); 
     request.headers(API.headers);
     request.then(function (APIresponse){
-        res.json(APIresponse.body);
+        res.json(APIresponse.body.api);
     })
            
 };
@@ -74,7 +74,7 @@ exports.next10MatchesByLeague = function(req, res) {
     });    
     request.headers(API.headers);
     request.then(function (APIresponse){
-        res.json(APIresponse.body);
+        res.json(APIresponse.body.api);
     })
         
 };

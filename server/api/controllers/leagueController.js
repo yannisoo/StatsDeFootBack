@@ -7,8 +7,8 @@ exports.getLeaguesByCountry = function(req, res) {
     let request = unirest("GET", API.url + 'leagues/country/' + req.params.country + '/2020');
     request.headers(API.headers);
     request.then(function (APIresponse){
-        APIresponse.body.datatype = datatype
-        res.json(APIresponse.body);
+        APIresponse.body.api.datatype = datatype
+        res.json(APIresponse.body.api);
     });
 }
 
