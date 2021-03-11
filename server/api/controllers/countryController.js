@@ -5,12 +5,11 @@ const API = require("../apiValue/apiValue.js");
 
 exports.getAll = function(req, res) {
     let datatype = 'country'
-    let request = unirest("GET", API.url + 'countries');
+    let request = unirest("GET", API.url + 'v2/countries');
     request.headers(API.headers);
     request.then(function (APIresponse){
-        console.log(APIresponse.body)
-        APIresponse.body.datatype = datatype
-        res.json(APIresponse.body);
+        APIresponse.body.api.datatype = datatype
+        res.json(APIresponse.body.api);
     })
         
 };

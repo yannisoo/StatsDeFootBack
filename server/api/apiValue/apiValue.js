@@ -1,6 +1,6 @@
 exports.headers = {
-	"x-rapidapi-host": "v3.football.api-sports.io",
-	"x-rapidapi-key": "9faa543c2bc3f4695396343d0a2ebee2",
+	"x-rapidapi-host": "api-football-v1.p.rapidapi.com",
+	"x-rapidapi-key": "41098e13b0msha7667a314616cddp1b480djsnf2fb9db5e9f1",
 	"useQueryString": true
 }
-exports.url = 'https://v3.football.api-sports.io/'
+exports.url = 'https://rapidapi.p.rapidapi.com/'
