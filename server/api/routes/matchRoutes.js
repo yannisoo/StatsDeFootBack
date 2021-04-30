@@ -16,6 +16,9 @@ module.exports = function(app) {
         .get(match.matchByDate)
 
     app.route('/matchByDateAndLeague/:date/:league')
+        .get(cache.cache(3600), match.matchByDateAndLeague)
+        
+    app.route('/liveMatchByDateAndLeague/:date/:league')
         .get(match.matchByDateAndLeague)
 
     app.route('/next10MatchesByLeague/:id')
