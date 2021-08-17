@@ -30,7 +30,7 @@ const option = {
 
 //config cors
 var corsOptions = {
-    origin: ['https://statsdefootfront.herokuapp.com', 'https://statsdefoot.herokuapp.com', 'http://localhost:4200'],
+    origin: "*",
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
     credentials: true,
     optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
